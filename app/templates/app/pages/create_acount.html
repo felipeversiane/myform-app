@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYFORM - Criar Conta</title>
+</head>
+<style>
+    
+</style>
+<body>
+  <div class="container">
+      <div class="logo">
+          <h1><span>my</span><span style='color:#666; '>form</span></h1>
+      </div>
+      <div class="message">
+          <p>
+              Crie sua conta para começar a usar o MyForm.</p>
+      </div>
+      <div class="form-container">
+          <form>
+              <label  for="username">Username</label>
+              <input placeholder = "Digite um nome de usuário" type="text" id="username" name="username" required>
+              <label for="email">E-mail</label>
+              <input placeholder = "Digite seu endereço de e-mail"type="email" id="email" name="email" required>
+              <label for="password">Senha</label>
+              <input placeholder = "Digite uma senha"type="password" id="password" name="password" required>
+              <label for="confirm-password">Confirmar senha</label>
+              <input placeholder = "Digite novamente sua senha"type="password" id="confirm-password" name="confirm-password" required>
+              <button type="submit">Criar conta</button>
+          </form>
+      </div>
+      <div class="new-account">
+          <p>Já possui uma conta? <a href="localhost:8000/login">Faça login aqui</a>.</p>
+      </div>
+  </div>
+</body>
+</html>
