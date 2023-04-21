@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYFORM - Login</title>
+     <style>
+        @font-face {
+            font-family:Poppins;
+            src:  url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+        }
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f6f6f6;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 32px;
+        }
+        
+        .logo img {
+            width: 50px;
+            height: 50px;
+            margin-right: 16px;
+        }
+        
+        .logo h1 {
+            font-size: 32px;
+            font-weight: 400;
+            color: #222;
+            font-family: sans-serif;
+            font-weight:bold;
+        }
+        
+        .message {
+            font-size: 20px;
+            margin-bottom: 32px;
+            color: #444;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 400px;
+            padding: 32px;
+            background-color: #fff;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+            padding: 8px;
+            margin-bottom: 16px;
+            border-radius: 4px;
+            border: none;
+            background-color: #f6f6f6;
+            color: #222;
+            font-size: 16px;
+            outline: none;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        button[type="submit"] {
+            padding: 12px;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #222;
+        }
+        
+        .signup {
+            margin-top: 16px;
+            font-size: 14px;
+            text-align: center;
+        }
+        
+        .signup a {
+            color: #444;
+            text-decoration: none;
+        }
+        
+        .signup a:hover {
+            color: #222;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1><span>my</span><span style='color:#666; '>form</span></h1>
+        </div>
+        <div class="message">
+            <p>Welcome back! Please sign in to continue.</p>
+        </div>
+        <div class="form-container">
+            <form>
+                <label  for="username">Username</label>
+                <input placeholder = "Digite o usuario" type="text" id="username" name="username" required>
+                <label for="password">Senha</label>
+                <input placeholder = "Digite a senha"type="password" id="password" name="password" required>
+                <button type="submit">Sign in</button>
+            </form>
+        </div>
+        <div class="new-account">
+            <p>Don't have an account? <a href="#">Create one here</a>.</p>
+        </div>
+    </div>
+</body>
+</html>

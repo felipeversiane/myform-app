@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYFORM - Pagina Inicial</title>
+</head>
+<style>
+    body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        text-align: center;
+        height: 100px; /* altura do header */
+    }
+    main {
+        margin: 100px auto; /* altura do header e do footer */
+        max-width: 600px;
+        padding: 20px;
+    }
+    p {
+        font-size: 1.2em;
+        line-height: 1.5;
+    }
+    footer {
+        height: 100px; /* altura do footer */
+    }
+    body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+    .container {
+        margin: 0 auto;
+        max-width: 600px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        margin-bottom: 200px; /* altura do footer */
+        margin-top: 200px; /* altura do header */
+    }
+    p {
+        font-size: 1.2em;
+        line-height: 1.5;
+    }
+    main {
+        margin-bottom: 200px; /* altura do footer */
+        margin-top: 200px; /* altura do header */
+        text-align: left;
+    }
+    h1 {
+        font-size: 3em;
+        margin-bottom: 20px;
+    }
+    h1 span:first-of-type {
+        color: #333333;
+    }
+    h1 span:last-of-type {
+        color: #666666;
+    }
+    button {
+        background-color: rgb(57,57,57);
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2em;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #999999;
+    }
+</style>
+<script>
+    const formBtn = document.querySelector('#form-btn');
+    formBtn.addEventListener('click', () => {
+      window.location.href = 'http://localhost:8000/app/login';
+    });
+  </script>
+<body>
+    <header>{% include 'app/header.html' %}</header>
+    <main class="container">
+        <h1><span>my</span><span>form</span></h1>
+        <p> Bem vindo a nosso site de formulários online . <br> Nosso site oferece a você a capacidade de criar formulários personalizados e salvá-los diretamente em nosso site. Você pode criar quantos formulários quiser e eles serão armazenados com segurança em nossa plataforma.</p>
+        <button id="form-btn">Começar formulário</button>
+    </main>
+    <footer>{% include 'app/footer.html' %}</footer>
+</body>
+</html>
