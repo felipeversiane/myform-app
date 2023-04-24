@@ -11,22 +11,7 @@
         font-family: sans-serif;
         margin: 0;
         padding: 0;
-    }
-    header {
-        text-align: center;
-        height: 100px; /* altura do header */
-    }
-    p {
-        font-size: 1.2em;
-        line-height: 1.5;
-    }
-    footer {
-        height: 100px; /* altura do footer */
-    }
-    body {
-        font-family: sans-serif;
-        margin: 0;
-        padding: 0;
+        background-color: rgb(223,223,223);
     }
     header {
         background-color: #333;
@@ -35,12 +20,23 @@
         padding: 20px;
         font-size: 2em;
         margin-bottom: 20px;
+        height: 100px; /* altura do header */
+
+    }
+    p {
+        font-size: 1.2em;
+        line-height: 1.5;
+    }
+    footer {
+        height:10rem;
+        width:100vw;
+        bottom:0;
     }
     .container {
         margin: 0 auto;
         max-width: 600px;
         padding: 20px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        
         
 
     }
@@ -49,10 +45,11 @@
         line-height: 1.5;
     }
     main {
-        height:100vh;
-        weight :100vw;
+        height:100%;
+        width: 100%%;
         text-align: left;
-        margin: 170px auto; /* altura do header e do footer */
+        margin: 170px auto 0;
+        position: relative;
     }
     h1 {
         font-size: 3em;
@@ -64,8 +61,8 @@
     h1 span:last-of-type {
         color: #666666;
     }
-    .container button {
-        background-color: rgb(57,57,57);
+    #form-btn {
+        background-color: #444;
         color: #fff;
         padding: 10px 20px;
         border: none;
@@ -75,23 +72,102 @@
         margin-left: 22rem;
     }
     button:hover {
-        background-color: #999999;
+        background-color: #222;
+    }
+    hr {
+        height: 1px;
+        width: 100vw;
+        background-color: #fff;
+        border: none;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+        margin: 10rem 0;
+    }
+    .search{
+        background-color:#fff;
+        border-radius:20px;
+        width:60vw;
+        height:60rem;
+        margin-bottom:5rem;
+        margin-top:16rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        max-width:100%;
+    }
+    .header-search{
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+        border-radius:20px;
+        width:100%;
+        height:1rem;
+        background-color:#ddd;
+        display:flex;
+        align-items:center;
+        justify-content:left;
+        margin:auto;
+    }
+    .search-box input:focus {
+        outline: none;
+    }
+    .search-box {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 30px;
+        padding:5px;
+        margin-right: 0px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    
+    .search-box input {
+        border: none;
+        background-color: transparent;
+        flex: 1;
+        margin-left: 10px;
+        font-size: 16px;
+    }
+    .search-box button {
+        border: none;
+        background-color: #f2f2f2;
+        color: #333;
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+    
+    .search-box button:hover {
+        background-color: #333;
+        color: #fff;
     }
     
 </style>
 <script>
-    const formBtn = document.querySelector('#form-btn');
-    formBtn.addEventListener('click', () => {
-      window.location.href = 'http://localhost:8000/login';
-    });
-  </script>
+    window.onload = function() {
+        // Obter o botão pelo id
+        const formBtn = document.getElementById('form-btn');
+      
+        // Adicionar um evento de clique ao botão
+        formBtn.addEventListener('click', () => {
+          // Redirecionar para a página desejada
+          window.location.href = 'http://localhost:8000/login';
+        });
+      }
+</script>
 <body>
     <header>{% include 'app/partials/header.html' %}</header>
     <main >
         <div class="container">
-            <h1><span>my</span><span>form</span></h1>
+            <h1><span style='color:#141414;'>my</span><span>form</span></h1>
             <p> Bem vindo a nosso site de formulários online . <br> Nosso site oferece a você a capacidade de criar formulários personalizados e salvá-los diretamente em nosso site. Você pode criar quantos formulários quiser e eles serão armazenados com segurança em nossa plataforma.</p>
             <button id="form-btn">Começar formulário</button>
+        </div>
+        <hr>
+        <div class="container search">
+            <div class="container header-search">
+                <div class="search-box">
+                    <input type="text" placeholder="Pesquise um formulário" maxlength="20">
+                    <button>Pesquisar</button>
+                </div>
+            </div>
         </div>
     </main>
     <footer>{% include 'app/partials/footer.html' %}</footer>
