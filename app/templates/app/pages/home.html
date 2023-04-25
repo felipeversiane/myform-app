@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>MYFORM - Pagina Inicial</title>
 </head>
 <style>
@@ -71,15 +72,15 @@
         cursor: pointer;
         margin-left: 22rem;
     }
-    button:hover {
+    #form-btn:hover {
         background-color: #222;
     }
     hr {
-        height: 1px;
+        height: 0.1px;
         width: 100vw;
-        background-color: #fff;
+        background-color:  rgb(223,223,223);
         border: none;
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
         margin: 10rem 0;
     }
     .search{
@@ -88,14 +89,14 @@
         width:60vw;
         height:60rem;
         margin-bottom:5rem;
-        margin-top:16rem;
+        margin-top:4rem;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         max-width:100%;
     }
     .header-search{
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-        border-radius:20px;
-        width:100%;
+        border-radius:30px;
+        width:fit-content;
         height:1rem;
         background-color:#ddd;
         display:flex;
@@ -111,9 +112,8 @@
         align-items: center;
         background-color: #fff;
         border-radius: 30px;
-        padding:5px;
-        margin-right: 0px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        padding: 5px;
+
     }
     
     .search-box input {
@@ -132,12 +132,56 @@
         border-radius: 30px;
         cursor: pointer;
         transition: all 0.2s ease-in-out;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
     
     .search-box button:hover {
         background-color: #333;
         color: #fff;
     }
+    .btn{
+        width: 40px;
+        height: 40px;
+        background-color:#fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        border-radius: 30px;
+        margin-left:20px;
+        display:flex;
+        align-items: center;
+        justify-content:center;
+
+    }
+    
+    .header-search a {
+        text-decoration: none;
+        color: #444;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+    .header-search a  :hover {
+        color:#fff;
+        background-color: #333;
+        
+    }
+    #edited{
+        margin-left: 1px;
+    }
+    .result{
+        margin-top: 2rem;
+        height: 80%;
+        width: 90%;
+        background-color:rgb(223,223,223);
+        border-radius: 30px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        max-width: none;
+
+    }
+    .content{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     
 </style>
 <script>
@@ -151,6 +195,7 @@
           window.location.href = 'http://localhost:8000/login';
         });
       }
+      
 </script>
 <body>
     <header>{% include 'app/partials/header.html' %}</header>
@@ -161,14 +206,31 @@
             <button id="form-btn">Começar formulário</button>
         </div>
         <hr>
+        
         <div class="container search">
             <div class="container header-search">
                 <div class="search-box">
                     <input type="text" placeholder="Pesquise um formulário" maxlength="20">
-                    <button>Pesquisar</button>
+                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
+                <a id="emoji-add" href="">
+                    <div class="btn add">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </a>
+                
+                <a id="emoji-edit"href="">
+                    <div class="btn edit">
+                        <i id="edited"class="fa-sharp fa-solid fa-file-pen"></i>
+                    </div>
+                </a>
             </div>
-        </div>
+            <div class="container result">
+                <div class="container content">
+                    <p class="message"></p>
+                </div>
+
+            </div>
     </main>
     <footer>{% include 'app/partials/footer.html' %}</footer>
 </body>
