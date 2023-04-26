@@ -14,66 +14,19 @@
         padding: 0;
         background-color: rgb(223,223,223);
     }
-    header {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 20px;
-        font-size: 2em;
-        margin-bottom: 20px;
-        height: 100px; /* altura do header */
-
-    }
     p {
         font-size: 1.2em;
         line-height: 1.5;
-    }
-    footer {
-        height:10rem;
-        width:100vw;
-        bottom:0;
     }
     .container {
         margin: 0 auto;
         max-width: 600px;
         padding: 20px;
         
-        
-
     }
     p {
         font-size: 1.2em;
         line-height: 1.5;
-    }
-    main {
-        height:100%;
-        width: 100%%;
-        text-align: left;
-        margin: 170px auto 0;
-        position: relative;
-    }
-    h1 {
-        font-size: 3em;
-        margin-bottom: 20px;
-    }
-    h1 span:first-of-type {
-        color: #333333;
-    }
-    h1 span:last-of-type {
-        color: #666666;
-    }
-    #form-btn {
-        background-color: #444;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1.2em;
-        cursor: pointer;
-        margin-left: 22rem;
-    }
-    #form-btn:hover {
-        background-color: #222;
     }
     hr {
         height: 0.1px;
@@ -82,104 +35,6 @@
         border: none;
         box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
         margin: 10rem 0;
-    }
-    .search{
-        background-color:#fff;
-        border-radius:20px;
-        width:60vw;
-        height:60rem;
-        margin-bottom:5rem;
-        margin-top:4rem;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        max-width:100%;
-    }
-    .header-search{
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-        border-radius:30px;
-        width:fit-content;
-        height:1rem;
-        background-color:#ddd;
-        display:flex;
-        align-items:center;
-        justify-content:left;
-        margin:auto;
-    }
-    .search-box input:focus {
-        outline: none;
-    }
-    .search-box {
-        display: flex;
-        align-items: center;
-        background-color: #fff;
-        border-radius: 30px;
-        padding: 5px;
-
-    }
-    
-    .search-box input {
-        border: none;
-        background-color: transparent;
-        flex: 1;
-        margin-left: 10px;
-        font-size: 16px;
-    }
-    .search-box button {
-        border: none;
-        background-color: #f2f2f2;
-        color: #333;
-        font-size: 16px;
-        padding: 10px 20px;
-        border-radius: 30px;
-        cursor: pointer;
-        transition: all 0.2s ease-in-out;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    }
-    
-    .search-box button:hover {
-        background-color: #333;
-        color: #fff;
-    }
-    .btn{
-        width: 40px;
-        height: 40px;
-        background-color:#fff;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        border-radius: 30px;
-        margin-left:20px;
-        display:flex;
-        align-items: center;
-        justify-content:center;
-
-    }
-    
-    .header-search a {
-        text-decoration: none;
-        color: #444;
-        cursor: pointer;
-        transition: all 0.2s ease-in-out;
-    }
-    .header-search a  :hover {
-        color:#fff;
-        background-color: #333;
-        
-    }
-    #edited{
-        margin-left: 1px;
-    }
-    .result{
-        margin-top: 2rem;
-        height: 80%;
-        width: 90%;
-        background-color:rgb(223,223,223);
-        border-radius: 30px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        max-width: none;
-
-    }
-    .content{
-        display:flex;
-        align-items: center;
-        justify-content: center;
     }
 
     
@@ -198,40 +53,10 @@
       
 </script>
 <body>
-    <header>{% include 'app/partials/header.html' %}</header>
+    {% include 'app/partials/header.html' %}
+    {%include "app/partials/search.html"%}
     <main >
-        <div class="container">
-            <h1><span style='color:#141414;'>my</span><span>form</span></h1>
-            <p> Bem vindo a nosso site de formulários online . <br> Nosso site oferece a você a capacidade de criar formulários personalizados e salvá-los diretamente em nosso site. Você pode criar quantos formulários quiser e eles serão armazenados com segurança em nossa plataforma.</p>
-            <button id="form-btn">Começar formulário</button>
-        </div>
-        <hr>
-        
-        <div class="container search">
-            <div class="container header-search">
-                <div class="search-box">
-                    <input type="text" placeholder="Pesquise um formulário" maxlength="20">
-                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
-                <a id="emoji-add" href="">
-                    <div class="btn add">
-                        <i class="fa-solid fa-plus"></i>
-                    </div>
-                </a>
-                
-                <a id="emoji-edit"href="">
-                    <div class="btn edit">
-                        <i id="edited"class="fa-sharp fa-solid fa-file-pen"></i>
-                    </div>
-                </a>
-            </div>
-            <div class="container result">
-                <div class="container content">
-                    <p class="message"></p>
-                </div>
-
-            </div>
     </main>
-    <footer>{% include 'app/partials/footer.html' %}</footer>
+    {% include 'app/partials/footer.html' %}
 </body>
 </html>
