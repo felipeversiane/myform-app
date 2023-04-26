@@ -20,8 +20,8 @@
     }
     .container {
         margin: 0 auto;
-        max-width: 600px;
-        padding: 20px;
+        max-width: 144rem;
+        padding: 3rem;
         
     }
     p {
@@ -36,6 +36,49 @@
         box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
         margin: 10rem 0;
     }
+    .main-content{
+        margin: 5rem 5rem auto ;
+        widht:90%;
+        padding-top:0;
+      
+
+    }
+    .main-content-list{
+        display:grid;
+        grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+        gap:5rem;
+        height:30rem;
+        overflow-y: scroll;
+        background-color: #fff;
+        border-radius:20px;
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.2);
+    }
+    .form-list-item{
+        margin-top:2rem;
+        max-width:30rem;
+
+    }
+    .form img{
+        max-width:100%;
+        border-top-left-radius:30px;
+        border-top-right-radius:30px;
+
+    }
+    .form{
+        background:#999;
+        border-radius:30px;
+        box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3);
+        transform: scale(1);
+        transition:transform 250ms ease-in-out;
+       
+        
+    }
+    .form-list-item:hover{
+        transform: scale(1.02)
+        
+
+    }
+
 
     
 </style>
@@ -55,7 +98,15 @@
 <body>
     {% include 'app/partials/header.html' %}
     {%include "app/partials/search.html"%}
-    <main >
+    <main class="main-content-container">
+        <div class="main-content container main-content-list">
+            <div class="form form-list-item">
+                <div class="form-cover">
+                    <img src=" https://via.placeholder.com/1280x720/212121" alt="">
+                </div>
+            </div>
+            
+        </div>
     </main>
     {% include 'app/partials/footer.html' %}
 </body>
