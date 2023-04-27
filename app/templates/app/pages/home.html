@@ -55,18 +55,22 @@
     }
     .form-list-item{
         margin-top:2rem;
-        max-width:30rem;
+        max-width:35rem;
 
     }
     .form img{
         max-width:100%;
-        border-top-left-radius:30px;
-        border-top-right-radius:30px;
+        border-top-left-radius:20px;
+        border-top-right-radius:20px;
 
     }
     .form{
-        background:#999;
-        border-radius:30px;
+        position:relative;
+        background:#fff;
+        border-top-left-radius:20px;
+        border-top-right-radius:20px;
+        border-bottom-left-radius:10px;
+        border-bottom-right-radius:10px;
         box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3);
         transform: scale(1);
         transition:transform 250ms ease-in-out;
@@ -74,8 +78,44 @@
         
     }
     .form-list-item:hover{
-        transform: scale(1.02)
+        transform: scale(1.02);
+        box-shadow: -10px 8px 18px rgba(0, 0, 0, 0.3);
         
+
+    }
+    .form-title-container{
+        padding:0 2rem;
+    }
+    .form-author{
+        padding:0 2rem;
+    }
+    .form-author-item{
+        margin-right:1rem;
+        color:#444;
+    }
+    .form-footer a {
+        background: #333;
+        width:100%;
+        height:1rem;
+        display: block;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        padding: 1.5rem 1.5rem;
+        transition: all 300ms ease-in-out;
+        margin:0;
+        border-bottom-left-radius:30px;
+        border-bottom-right-radius:30px;
+    }
+
+    .form-footer a:hover {
+        filter: brightness(2);
+    }
+    .form-footer{
+
+        margin:3.3rem auto 0;
+        padding:0;
+        height:1rem;
 
     }
 
@@ -104,6 +144,28 @@
                 <div class="form-cover">
                     <img src=" https://via.placeholder.com/1280x720/212121" alt="">
                 </div>
+
+                <div class="form-title-container">
+                    <h2 class="form-title">Lorem ipsum dolor sit amet.</h2>
+                </div>
+
+                <div class="form-author">
+                    <span class="form-author-item">
+                        <i class="fas fa-user"></i>
+                        Felipe Fernandes
+                    </span>
+                    <span class="form-author-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        16/10/2021 às 11:21
+                    </span>
+                </div>
+
+                 <footer class="form-footer">
+                    <a class="form-read-more button button-dark button-full-width" href="">
+                        <i class="fas fa-eye"></i>
+                        <span>ver mais...</span>
+                    </a>
+                </footer>
             </div>
             
         </div>
